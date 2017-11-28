@@ -206,16 +206,15 @@ def player_stats(name_argument)
         value.each do |name, stats_hash|
           stats_hash.each do |stat, stat_value|
             if name == name_argument
-              output << stat => stat_value
+              output << stat 
             end
           end
         end
       end
     end
-    end
   end
   output
-  end
+end
 
 
 def big_shoe_rebounds
