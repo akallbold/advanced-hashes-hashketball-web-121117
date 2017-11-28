@@ -207,7 +207,7 @@ def player_stats(name_argument)
           stats_hash.each do |stat, stat_value|
             if name == name_argument
               output << stat => stat_value
-              output << stat_value
+              # output << stat_value
             end
           end
         end
