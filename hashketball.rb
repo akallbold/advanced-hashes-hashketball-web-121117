@@ -197,22 +197,26 @@ def player_numbers(team)
   output
 end
 
-def player_stats(name)
+def player_stats(name_argument)
   output=[]
 
-  game_hash.each do |loc,stats|
-    stats.each do |desc,det|
-      if det == :players
-        det.each do |player, player_stats|
-          if player==name
-            output<< player_stats
+  game_hash.each do |loc,hash|
+    hash.each do |key2, value|
+      if key2 == :players
+        value.each do |name, stats_hash|
+          stats_hash.each do |stat, stat_value|
+            if name == name_argument
+              output << stat => stat_value
+            end
           end
         end
       end
     end
+    end
   end
   output
-end
+  end
+
 
 def big_shoe_rebounds
 rebounds_output=0
