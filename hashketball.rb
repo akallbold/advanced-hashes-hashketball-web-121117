@@ -192,7 +192,7 @@ def player_numbers(team)
               # if value == team
 # output << key2
               output << stat_value
-            end
+            # end
             end
           end
         end
