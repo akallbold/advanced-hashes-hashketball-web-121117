@@ -180,7 +180,7 @@ def player_numbers(team)
   output=[]
 
   game_hash.each do |loc,hash|
-    if hash.includes?(team)
+    if hash.include?(team)
     hash.each do |key2, value|
       if key2 == :players
 
