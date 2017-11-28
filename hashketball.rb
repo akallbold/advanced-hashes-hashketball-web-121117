@@ -142,7 +142,7 @@ def shoe_size(player_name)
       if key == :players
           binding.pry
         value.each do |name, stats_hash|
-          if name = player_name
+          if name == player_name
             output = stats_hash[:shoe]
           end
         end
