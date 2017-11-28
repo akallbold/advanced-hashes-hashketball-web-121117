@@ -190,8 +190,9 @@ def player_numbers(team)
             if stat == :number
               output << key2
               if value == team
-                                            
+
               output << stat_value
+            end
             end
           end
         end
