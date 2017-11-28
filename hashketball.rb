@@ -229,7 +229,7 @@ shoe_size_compare = 0
             if key2 == :shoe
               if value2 > shoe_size_compare
                 shoe_size_compare = value2
-                rebounds_output = :rebounds
+                rebounds_output = stats_hash[:rebounds]
               end
             end
           end
