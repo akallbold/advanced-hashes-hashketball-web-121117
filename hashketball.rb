@@ -226,7 +226,7 @@ shoe_size_compare=0
       if key == :players
         value.each do |name,stats_hash|
           stats_hash.each do |key2, value2|
-            if [:shoe] > shoe_size_compare
+            if :shoe > shoe_size_compare
               shoe_size_compare = [:shoe]
               rebounds_output = [:rebounds]
             end
