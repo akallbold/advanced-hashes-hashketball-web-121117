@@ -186,8 +186,9 @@ def player_numbers(team)
         value.each do |name, stats_hash|
 
           stats_hash.each do |stat, stat_value|
-                              output << key2
+
             if stat == :number && value == team
+                                            output << key2
               output << stat_value
             end
           end
