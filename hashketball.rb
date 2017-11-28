@@ -229,6 +229,7 @@ shoe_size_compare=0
             if [:shoe] > shoe_size_compare
               shoe_size_compare = [:shoe]
               rebounds_output = [:rebounds]
+            end
           end
         end
       end
