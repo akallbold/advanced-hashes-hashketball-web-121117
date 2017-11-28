@@ -136,12 +136,12 @@ end
 
 def shoe_size(player_name)
   output=0
-  game_hash.each do |loc,key|
-    key.each do |key2,value|
-      if key2 == :players
-        value.each do |name, stats|
+  game_hash.each do |loc,hash|
+    hash.each do |key,value|
+      if key == :players
+        value.each do |name, stats_hash|
           if name = player_name
-            output = stats[:shoe]
+            output = stats_hash[:shoe]
           end
         end
       end
@@ -239,5 +239,3 @@ shoe_size_compare = 0
   end
 rebounds_output
 end
-
-
