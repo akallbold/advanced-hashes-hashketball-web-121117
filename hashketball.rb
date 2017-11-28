@@ -221,13 +221,14 @@ def big_shoe_rebounds
 rebounds_output=0
 shoe_size_compare=0
 
-  game_hash.each do |loc,key|
-    key.each do |key2,value|
-      if key2 == :players
-        value.each do |name,stats|
-          if [stats][:shoe] > shoe_size_compare
-            shoe_size_compare = [:shoe]
-            rebounds_output = [:rebounds]
+  game_hash.each do |loc,hash|
+    hash.each do |key,value|
+      if key == :players
+        value.each do |name,stats_hash|
+          stats_hash.each do |key2, value2|
+            if [:shoe] > shoe_size_compare
+              shoe_size_compare = [:shoe]
+              rebounds_output = [:rebounds]
           end
         end
       end
