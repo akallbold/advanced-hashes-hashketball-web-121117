@@ -179,20 +179,16 @@ end
 def player_numbers(team)
   output=[]
 
-  game_hash.each do |loc,hash|
-    hash.each do |key2, value|
+  game_hash.each do |loc,key|
+    key.each do |key2, value|
       if value == team
-
         if key2 == :players
-          output << key2
-          value.each do |name, stats_hash|
-            # output <<name
-            # output << stats_hash
+          value.each do |value2, num|
+            puts value2
+            puts num
             binding.pry
-            stats_hash.each do |stat, stat_value|
-              if stat == "number:"
-                output << stat_value
-              end
+            if num == :number
+              output << [:number]
             end
           end
         end
