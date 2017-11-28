@@ -192,7 +192,7 @@ def player_numbers(team)
         end
       end
     end
-  end 
+  end
   output
 end
 
