@@ -136,12 +136,14 @@ end
 
 def shoe_size(player_name)
   output=0
+end_variable= false
   game_hash.each do |loc,hash|
     hash.each do |key,value|
       if key == :players
         value.each do |name, stats_hash|
-          if name = player_name
+          if name = player_name && end_variable == false
             output = stats_hash[:shoe]
+            end_variable = true
           end
         end
       end
