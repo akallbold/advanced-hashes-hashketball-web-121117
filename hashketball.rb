@@ -135,6 +135,7 @@ def num_points_scored(player)
 end
 
 def shoe_size(player_name)
+  binding.pry
   output=0
   game_hash.each do |loc,hash|
     hash.each do |key,value|
